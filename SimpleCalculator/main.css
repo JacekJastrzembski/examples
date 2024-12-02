@@ -1,0 +1,42 @@
+body{
+    background-color: #191b22;
+    color: #cecd84;
+    margin: 0;
+}
+#container{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+input[type=button] {
+    background-color: #41b188;
+    color: black;
+    font-weight: normal;
+    min-height: 25px;
+    border-radius: 5px;
+}
+input[type=number]{
+    background-color: #41b188;
+    min-height: 20px;
+    font-size: 14px;
+}
+#result{
+    margin-top:25px;
+    font-weight: bold;
+    font-size: 22px;
+}
+.inputfield{
+
+    width:350px;
+    text-align: right;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:16px;
+
+}
+#operations{
+    margin-left: auto;
+    margin-right: auto;
+}
