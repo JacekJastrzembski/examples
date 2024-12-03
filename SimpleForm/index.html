@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Prosty Formularz</title>
+
+</head>
+<body>
+    <div id="container">
+        <form id="contact">
+            <label class="formFont" for="name">Imię: </label><input type="text" id="name" required>
+            <label class="formFont" for="email">Email: </label><input type="email" id="email" required>
+            <label class="formFont" for="message">Wiadomość: </label><textarea rows="6" name="message" id="message" required></textarea>
+            <button type="submit" id="submit">Wyślij</button>
+        </form>
+        <br>
+        <button type="button" id="resetForm">Resetuj</button>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
