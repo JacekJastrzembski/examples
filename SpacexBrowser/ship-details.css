@@ -79,24 +79,21 @@ a.back:hover {
     padding: 10px;
 
 }
-img{
+img {
     max-width: 100%; 
     margin: 10px 0;
 }
-.rocket-images{
-    display:flex;
-    flex-wrap:wrap;
-    gap: 10px;
-    justify-content: space-around;
+.ship-image {
+   text-align: center;
 }
-.rocket-images img {
-    max-width: 100%; 
+.ship-image img {
+    max-width: 100%;
     height: auto;
     border-radius: 5px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     
 }
-.return{
+.return {
     margin-top: 15px;
     justify-self:center;
 }
