@@ -12,13 +12,14 @@ async function fetchRockets(){
 // Wyswietlanie rakiet
 function displayRockets(rockets) {
     const rocketList = document.getElementById('rocket-list');
+
     rockets.forEach(rocket => {
         const listItem = document.createElement('li');
+        listItem.classList.add('rocket-list')
         listItem.innerHTML = `
-            <h2>
-            <a href="rocket-details.html?id=${rocket.id}">${rocket.name}</a>
-            </h2>
+            <h2><a class="rocket-link" href="rocket-details.html?id=${rocket.id}">${rocket.name}</a></h2>
             <p>${rocket.description}</p>
+            <img src="${rocket.flickr_images[0]}" alt="${rocket.name}">
         `;
         rocketList.appendChild(listItem);
     });

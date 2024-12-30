@@ -21,15 +21,27 @@ async function fetchRocketDetails() {
 // Wyswietlenie szczegolow rakiety
 function displayRocketDetails(rocket) {
     const container = document.getElementById('rocket-details');
-    container.innerHTML = `
+
+    let rocketDetailsHTML = `
         <h2>${rocket.name}</h2>
         <p><strong>Description:</strong> ${rocket.description}</p>
         <p><strong>First Flight:</strong> ${rocket.first_flight}</p>
         <p><strong>Height:</strong> ${rocket.height.meters} meters</p>
         <p><strong>Diameter:</strong> ${rocket.diameter.meters} meters</p>
         <p><strong>Mass:</strong> ${rocket.mass.kg} kg</p>
-        <a href="index.html">Back to the list</a>
     `;
+    rocketDetailsHTML += `<div class="rocket-images">`;
+    rocket.flickr_images.forEach(image => {
+        rocketDetailsHTML += `<img src="${image}" alt="${rocket.name}">`;
+    });
+    
+    rocketDetailsHTML += `</div>`;
+    rocketDetailsHTML += `
+    <div class="return">
+    <a class="back" href="rocket-list.html">Back to the list</a>
+    </div>
+    `;
+    container.innerHTML = rocketDetailsHTML;
 }
 
 // Wyswietl blad
