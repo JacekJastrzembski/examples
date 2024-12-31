@@ -12,7 +12,6 @@ async function fetchShips(){
 // Wyswietlanie statkow
 function displayShips(ships) {
     const shipList = document.getElementById('ship-list');
-    
 
     ships.forEach(ship => {
         const listItem = document.createElement('li');
@@ -27,7 +26,7 @@ function displayShips(ships) {
         <h3 class="ship">${ship.type}</h3>
         ${imageHTML}
         `;
-        
+
         shipList.appendChild(listItem);
     });
 }

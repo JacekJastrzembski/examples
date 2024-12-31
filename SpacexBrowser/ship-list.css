@@ -68,6 +68,9 @@ li.ship-list {
     padding: 10px;
 
 }
+.nav-link.active {
+    font-weight: bold;
+}
 img {
     width: 40%;
     max-width: 100%; 

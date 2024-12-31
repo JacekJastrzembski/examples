@@ -79,6 +79,9 @@ a.back:hover {
     padding: 10px;
 
 }
+.nav-link.active {
+    font-weight: bold;
+}
 img {
     max-width: 100%; 
     margin: 10px 0;
