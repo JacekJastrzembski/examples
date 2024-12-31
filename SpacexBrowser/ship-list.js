@@ -18,20 +18,16 @@ function displayShips(ships) {
         const listItem = document.createElement('li');
         listItem.classList.add('ship-list');
 
-        if (ship.image != null){
-            listItem.innerHTML = `
-            <h2><a class="ship-link" href="ship-details.html?id=${ship.id}">${ship.name}</a></h2>
-            <h3 class="ship">${ship.type}</h3>
-            <img src="${ship.image}" alt="${ship.name}">
-        `;
-        } else{
-            listItem.innerHTML = `
-            <h2><a class="ship-link" href="ship-details.html?id=${ship.id}">${ship.name}</a></h2>
-            <h3 class="ship">${ship.type}</h3>
-            <p>No photo</p>
-        `;
-        }
+        const imageHTML = ship.image 
+        ? `<div class="ship-image"><img src="${ship.image}" alt="${ship.name}"></div>` 
+        : `<div class="ship-image"><p><strong>No photo</strong></p></div>`;
 
+        listItem.innerHTML = `
+        <h2><a class="ship-link" href="ship-details.html?id=${ship.id}">${ship.name}</a></h2>
+        <h3 class="ship">${ship.type}</h3>
+        ${imageHTML}
+        `;
+        
         shipList.appendChild(listItem);
     });
 }
