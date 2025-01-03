@@ -22,7 +22,7 @@ function displayShips(ships) {
         : `<div class="ship-image"><p><strong>No photo</strong></p></div>`;
 
         listItem.innerHTML = `
-        <h2><a class="ship-link" href="ship-details.html?id=${ship.id}">${ship.name}</a></h2>
+        <h2><a class="ship-link" href="../ship-details/ship-details.html?id=${ship.id}">${ship.name}</a></h2>
         <h3 class="ship">${ship.type}</h3>
         ${imageHTML}
         `;

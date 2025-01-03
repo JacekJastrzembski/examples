@@ -1,5 +1,5 @@
 // Pobierz dane na podstawie ID z linku
-async function fetchShipDetails() {
+async function fetchLaunchesDetails() {
     const params = new URLSearchParams(window.location.search);
     const shipId = params.get('id');
     if (!shipId) {
@@ -36,7 +36,7 @@ function displayShipDetails(ship) {
         ${imageHTML}
 
         <div class="return">
-            <a class="back" href="ship-list.html">Back to the list</a>
+            <a class="back" href="../ship-list/ship-list.html">Back to the list</a>
         </div>
     `;
     container.innerHTML = shipDetailsHTML;
@@ -48,4 +48,4 @@ function displayError(message) {
     container.innerHTML = `<p style="color: red;">${message}</p>`;
 }
 // Uruchom przy zaladowaniu strony
-fetchShipDetails();
+fetchLaunchesDetails();

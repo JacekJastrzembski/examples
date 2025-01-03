@@ -17,7 +17,7 @@ function displayRockets(rockets) {
         const listItem = document.createElement('li');
         listItem.classList.add('rocket-list')
         listItem.innerHTML = `
-            <h2><a class="rocket-link" href="rocket-details.html?id=${rocket.id}">${rocket.name}</a></h2>
+            <h2><a class="rocket-link" href="../rocket-details/rocket-details.html?id=${rocket.id}">${rocket.name}</a></h2>
             <p>${rocket.description}</p>
             <img src="${rocket.flickr_images[0]}" alt="${rocket.name}">
         `;

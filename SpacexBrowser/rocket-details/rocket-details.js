@@ -11,6 +11,7 @@ async function fetchRocketDetails() {
         const response = await fetch(`https://api.spacexdata.com/v4/rockets/${rocketId}`);
         if (!response.ok) throw new Error('Failed to fetch rocket details.');
         const rocket = await response.json();
+        
         displayRocketDetails(rocket);
     } catch (error) {
         console.error('Error fetching rockets details:', error);
@@ -45,7 +46,7 @@ function displayRocketDetails(rocket) {
     rocketDetailsHTML += `</div>`;
     rocketDetailsHTML += `
     <div class="return">
-    <a class="back" href="rocket-list.html">Back to the list</a>
+    <a class="back" href="../rocket-list/rocket-list.html">Back to the list</a>
     </div>
     `;
     container.innerHTML = rocketDetailsHTML;
