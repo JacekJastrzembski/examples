@@ -20,10 +20,12 @@ function displayRockets(rockets) {
             <h2><a class="rocket-link" href="../rocket-details/rocket-details.html?id=${rocket.id}">${rocket.name}</a></h2>
             <p>${rocket.description}</p>
             <img src="${rocket.flickr_images[0]}" alt="${rocket.name}">
+
         `;
         rocketList.appendChild(listItem);
     });
 }
+
 
 // Uruchom przy zaladowaniu strony
 fetchRockets();

@@ -100,3 +100,46 @@ img {
     margin-top: 15px;
     justify-self:center;
 }
+.drop{
+    position: relative;
+    display: inline-block;
+}
+.drop-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.drop-list {
+    position:relative;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 150px;
+    display: none;
+    z-index: 1000;
+    padding: 0;
+    margin: 5px 0 0;
+    list-style: none;
+    overflow-y: auto;
+}
+.drop-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.drop-list li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Link styling */
+.drop-list li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}

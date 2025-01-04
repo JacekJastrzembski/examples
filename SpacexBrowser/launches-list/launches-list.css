@@ -108,21 +108,23 @@ li.launches-list {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background: #eaf6ff;
-    height: 400px; /* Stała wysokość dla równomierności */
+    height: 450px; /* Stała wysokość dla równomierności */
 }
 
 .launch-patch img {
     max-width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit:contain;
     flex: 1;
     display: block;
     margin: auto;
-    padding-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
 }
 
 .launch-desc {
-    flex: 2;
+    flex: 1;
     min-width: 200px;
     max-height: 200px;
     text-overflow: ellipsis;

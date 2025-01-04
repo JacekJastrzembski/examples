@@ -1,3 +1,5 @@
+import { fetchLaunches } from '../launches-list/launches-list-local.js';
+import { dropFunc } from '../modules/dropFunc.js';
 // Pobierz dane na podstawie ID z linku
 async function fetchLaunchesDetails() {
     const params = new URLSearchParams(window.location.search);
@@ -12,6 +14,13 @@ async function fetchLaunchesDetails() {
         if (!response.ok) throw new Error('Failed to fetch ship details.');
         const ship = await response.json();
         displayShipDetails(ship);
+
+        dropFunc();
+        
+        const launchesData = localStorage.getItem('launches');
+        const launches = JSON.parse(launchesData);
+        displayShipLaunches(launches, shipId);
+
     } catch (error) {
         console.error('Error fetching ships details:', error);
         displayError('Failed to load ship details.');
@@ -25,7 +34,7 @@ function displayShipDetails(ship) {
         ? `<div class="ship-image"><img src="${ship.image}" alt="${ship.name}"></div>` 
         : `<div class="ship-image"><h2><strong>No photo</strong></h2></div>`;
 
-    const shipDetailsHTML = `
+    let shipDetailsHTML = `
         <h2>${ship.name}</h2>
         <p><strong>Type:</strong> ${ship.type || 'Unknown' }</p>
         <p><strong>Roles:</strong> ${ship.roles || 'Unknown'}</p>
@@ -39,9 +48,39 @@ function displayShipDetails(ship) {
             <a class="back" href="../ship-list/ship-list.html">Back to the list</a>
         </div>
     `;
+        shipDetailsHTML += `            
+            <div class="drop" id="drop">
+                <button class="drop-button" id="drop-button" type="button">Launches</button>
+                <ul class="drop-list" id="drop-list">
+                    
+                </ul>
+            </div>
+    `;  
     container.innerHTML = shipDetailsHTML;
 }
+function displayShipLaunches(launches, ship) {
+    const container = document.getElementById('drop-list');
+    if (!container) {
+        console.error("There is no drop-list element");
+        return;
+    }
+    
+    launches.forEach(launch => {
+        if(launch.ships == ship)
+        {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
 
+            link.href = `../launches-details/launches-details.html?id=${launch.id}`;
+            link.textContent = launch.name;
+
+            listItem.appendChild(link);
+            container.appendChild(listItem);
+        }
+       
+    });
+
+}
 // Wyswietl blad
 function displayError(message) {
     const container = document.getElementById('ship-details');
@@ -49,3 +88,4 @@ function displayError(message) {
 }
 // Uruchom przy zaladowaniu strony
 fetchLaunchesDetails();
+fetchLaunches();

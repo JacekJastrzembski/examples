@@ -7,10 +7,22 @@ async function fetchLaunches(){
     try {
         const response = await fetch('https://api.spacexdata.com/v5/launches');
         const launches = await response.json();
+        sortLaunches(launches);
         displayLaunches(launches);
+        
     } catch (error) {
         console.error('Error fetching launches:', error);
     }
+}
+
+// Sortowanie 
+function sortLaunches(launches) {
+    return launches.sort((a, b) => {
+        if (b.date_unix !== a.date_unix) {
+            return b.date_unix - a.date_unix;
+        }
+        return b.flight_number - a.flight_number;
+    });
 }
 
 // Wyswietlanie startow
