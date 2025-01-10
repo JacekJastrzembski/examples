@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { form } from './form.ts'
 function App() {
+
   useEffect(() => {
     form();
   }, []);
+  
   // Alerty
   const [message, setMessage] = useState<string | null>(null);
 
