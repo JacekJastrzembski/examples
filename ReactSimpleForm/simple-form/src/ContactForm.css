@@ -1,0 +1,96 @@
+#container{
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1rem;
+  padding-top: 0px;
+}
+form{
+  color:#2acacf;
+  display:grid;
+  padding: 10px;
+  font-weight: bold;
+  width:300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #29817a;
+  /*border: 5px solid #21635d; */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(3, 250, 209, 0.1);
+  background: linear-gradient(135deg, rgba(25, 165, 142, 0.2), rgba(6, 56, 122, 0.2));
+}
+
+.contactForm{
+  width: 100%;
+}
+.inputfield{
+  padding: 4px;
+}
+.inputfield label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+#name {
+  height: 25px; 
+  border: 2px solid #256852;
+  background-color: #c7f0b0;
+  color:black;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+#email {
+  height: 25px;
+  background-color: #c7f0b0;
+  border: 2px solid #256852;
+  color:black;
+  margin-bottom:10px;
+  border-radius: 10px;
+}
+#message{
+  padding: 5px;
+  border: 2px solid #256852;
+  line-height: normal;
+  margin-bottom: 15px;
+  background-color: #c7f0b0;
+  color:black;
+  border-radius: 10px;
+}
+#submit{
+  height: 30px;
+  width: 100px;
+  margin: auto;
+  background-color:#c7f0b0;
+  font-weight: bold;
+  color:#034244;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1px;
+}
+#submit:hover {
+  background-color: #29acb1;
+  box-shadow: 1px 2px 6px rgba(3, 250, 209, 0.2);
+}
+#resetForm{
+  height: 30px;
+  width: 100px;
+  margin: auto;
+  background-color:#c7f0b0;
+  font-weight: bold;
+  color:#034244;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+#resetForm:hover{
+  background-color: #29acb1;
+  box-shadow: 1px 2px 6px rgba(3, 250, 209, 0.2);
+}
+.alert{
+  color:#a0ff69;
+  margin-bottom: 15px;
+  font-weight: bold;
+}

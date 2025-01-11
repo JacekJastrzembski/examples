@@ -3,72 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  padding-top: 0;
 }
-#container{
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.App{
+  border-radius: 20px;
 }
-form{
-  color:#2acacf;
-  display:grid;
-  padding: 10px;
-  font-weight: bold;
-  width:300px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 5px solid #21635d;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(3, 250, 209, 0.1);
-}
-.formFont{
-  padding: 10px;
-}
-#name {
-  height: 20px; 
-  border: 2px solid #256852;
-  background-color: #c7f0b0;
-  color:black;
-}
-#email {
-  height: 20px; 
-  background-color: #c7f0b0;
-  border: 2px solid #256852;
-  color:black;
-}
-#message{
-  padding: 0px;
-  border: 2px solid #256852;
-  line-height: normal;
-  margin-bottom: 15px;
-  background-color: #c7f0b0;
-  color:black;
-}
-#submit{
-  height: 30px;
-  width: 100px;
-  margin: auto;
-  background-color:#c7f0b0;
-  font-weight: bold;
-  color:#055153;
-  margin-bottom: 10px;
-}
-#submit:hover {
-  background-color: #a0ff69;
-
-}
-#resetForm{
-  height: 25px;
-  width: 100px;
-  margin: auto;
-  background-color:#c7f0b0;
-  font-weight: bold;
-  color:#055153;
-  margin-bottom: 10px;
-}
-.alert{
-  color:#a0ff69;
-  margin-bottom: 15px;
-  font-weight: bold;
+.App h1{
+  font-size: 3rem;
+  opacity: 0.8;
 }
