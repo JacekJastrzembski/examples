@@ -1,0 +1,85 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 2rem;
+    /* text-align: center; */
+  }
+#container{
+    min-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #cecd84;
+    box-shadow: 1px 2px 6px rgba(3, 250, 209, 0.2);
+    padding: 10px;
+}
+input[type=button] {
+    background-color: #41b188;
+    color: black;
+    font-weight: bold;
+    min-height: 25px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border-width: 1px;
+    border-color:#08f39d;
+    box-shadow: 1px 2px 6px rgba(3, 250, 209, 0.1);
+    letter-spacing: 1px;
+    margin-top:5px;
+}
+input[type=button]:hover {
+    background-color: #5fffc4;
+}
+
+input[type=number]{
+    background-color: #41b188;
+    min-height: 20px;
+    font-size: 14px;
+    color:#000000;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px rgba(3, 250, 209, 0.1);
+}
+input[type=number]:hover {
+    background-color: #5fffc4;
+}
+#result{
+    margin-top:25px;
+    font-weight: bold;
+    font-size: 26px;
+}
+.inputfield{
+    width:400px;
+    text-align: right;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:18px;
+    margin-top: 5px;
+}
+#operations{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+  
+.resetButton {
+    margin-bottom: 20px;
+    background-color: #48b608;
+    color: black;
+    font-weight: bold;
+    min-height: 25px;
+    border-radius: 5px;
+    margin-left: 5px;
+    border-width: 0px;
+    box-shadow: 1px 2px 6px rgba(3, 250, 209, 0.1);
+    letter-spacing: 1px;
+}
+.resetButton:hover{
+    background-color: #6eff1b;
+}
+#result p{
+    text-shadow: 1px 2px 6px rgba(3, 250, 209, 0.1);
+}
+#container h1{
+    text-shadow: 1px 2px 6px rgba(3, 250, 209, 0.1);
+}

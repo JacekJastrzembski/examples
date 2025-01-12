@@ -1,51 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   /* text-align: center; */
 }
-#container{
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: #cecd84;
-}
-input[type=button] {
-  background-color: #41b188;
-  color: black;
-  font-weight: normal;
-  min-height: 25px;
-  border-radius: 10px;
-  margin-left: 5px;
-  border-width: 1px;
-  border-color:#08f39d;
-  
-}
-input[type=number]{
-  background-color: #41b188;
-  min-height: 20px;
-  font-size: 14px;
-  color:#000000;
-}
-#result{
-  margin-top:25px;
-  font-weight: bold;
-  font-size: 22px;
-}
-.inputfield{
-
-  width:350px;
-  text-align: right;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size:16px;
-
-}
-#operations{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-}
-
