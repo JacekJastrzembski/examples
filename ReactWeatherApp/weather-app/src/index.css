@@ -10,5 +10,6 @@
   min-height: 100vh;
   display: grid;
   background: linear-gradient(135deg,#153677, #4e08);
- 
+  max-height: 100vh;
+  box-sizing: content-box;
 }

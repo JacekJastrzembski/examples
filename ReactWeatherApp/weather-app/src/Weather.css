@@ -1,14 +1,16 @@
 .weather{
     /* place-self: center; */
     justify-self: center;
-    align-self:baseline;
+    align-self: baseline;
     padding: 40px;
     border-radius: 10px;
-    background: linear-gradient(135deg, #00feba, #5b548a);    display: flex;
+    background: linear-gradient(135deg, #00feba, #5b548a);    
+    display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 1px 1px 2px 3px rgba(3, 250, 209, 0.2);
     margin-top: 5vh;
+  
 }
 .weather h1{
     margin-bottom: 5vh;
@@ -67,21 +69,38 @@
 .weather-data .col span{
     display: block;
     font-size: 16px;
+    padding: 2px;
+    margin-top: 2px;
+
 }
 .weather-data .col img{
     width: 26px;
     margin-top: 10px;
 }
-@media (max-width: 750px) {
+@media (max-width: 650px) {
     
     .weather{
-        min-height: 100vh;
+        height: 100vh;
         margin-top: 0px;
         border-radius: 0px;
         width: 100%;
         place-content: center;
     }
     .search-bar{
-        margin-bottom: 5vh;
+        margin-bottom: 1vh;
     }
+}
+@media (max-width: 400px) {
+
+    .weather{
+        height: 100vh;
+    }
+    .weather h1{
+        font-size: 2.5rem;
+        margin-bottom: 2vh;
+    }
+    .weather-data .col span{
+        margin-top: 10px;
+    }
+    
 }
