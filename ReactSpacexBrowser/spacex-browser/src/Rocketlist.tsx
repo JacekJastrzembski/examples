@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './rocketlist.css'
+import { Link } from 'react-router-dom';
 
 interface Rocket {
   id: string;
@@ -28,7 +29,6 @@ const Rocketlist : React.FC = () => {
       setLoading(false);
     }
     };
-    
     fetchRockets();
   }, []);
 
@@ -48,9 +48,9 @@ const Rocketlist : React.FC = () => {
           {rockets.map((rocket) => (
             <li key={rocket.id} className="rocket-item">
               <h2>
-                <a className="rocket-link"href={`../rocket-details/rocket-details.html?id=${rocket.id}`}>
-                 {rocket.name}
-                </a>
+                <Link className="rocket-link" to={`/rockets/${rocket.id}`}>
+                {rocket.name}
+               </Link>
               </h2>
               <p>{rocket.description}</p>
               <img src={rocket.flickr_images[0]} alt={rocket.name} />

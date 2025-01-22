@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './navbar.css';
+import { NavLink } from 'react-router-dom'
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +12,9 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a href="/" className="navbar-logo">
+        <NavLink to="/" className="navbar-logo">
           SpaceX Rockets
-        </a>
+        </NavLink>
         <button className="menu-toggle" onClick={toggleMenu}>
           <span className="menu-icon"></span>
           <span className="menu-icon"></span>
@@ -21,24 +22,24 @@ const Navbar: React.FC = () => {
         </button>
         <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
-            <a href="/" className="navbar-link">
+            <NavLink to="/" className={({ isActive }: { isActive: boolean }) => isActive ? 'navbar-link active' : 'navbar-link'}>
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="/rockets" className="navbar-link">
+            <NavLink to="/rockets" className={({ isActive }: { isActive: boolean })=> isActive ? 'navbar-link active' : 'navbar-link'}>
               Rocket List
-            </a>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="/ships" className="navbar-link">
+            <NavLink to="/ships" className={({ isActive }: { isActive: boolean })=> isActive ? 'navbar-link active' : 'navbar-link'}>
               Ship List
-            </a>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="/launches" className="navbar-link">
+            <NavLink to="/launches" className={({ isActive }: { isActive: boolean }) => isActive ? 'navbar-link active' : 'navbar-link'}>
               Launches
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
