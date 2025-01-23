@@ -59,16 +59,15 @@ const Shipdetails: React.FC = () => {
                     <p><strong>Marine traffic:</strong></p>
                 )}
             </div>
-                <div className="ship-image">
+            <div className="ship-image">
                 {ship.image ? (
-                <img src={ship.image} alt={ship.name} />
+                    <img src={ship.image} alt={ship.name} />
                 ) : (
-                <div className="ship-photo">
-                    <p><strong>No photo</strong></p>
-                </div>
+                    <div className="ship-photo">
+                        <p><strong>No photo</strong></p>
+                    </div>
                 )}
-                </div>
-            
+            </div>
         </div>
       </div>
     );
