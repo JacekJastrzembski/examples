@@ -9,6 +9,7 @@
     top: 0;
     z-index: 1000;
     border-radius: 7px;
+    
 }
   
 .navbar-container {
@@ -27,23 +28,23 @@
 }
   
 .navbar-menu {
+    justify-self: right;
     list-style: none;
     display: flex;
     gap: 1.5rem;
     flex: 1;
     margin-left: 20px;
-    
 }
   
 .navbar-item {
     display: flex;
-    
 }
   
 .navbar-link {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
+
 }
   
 .navbar-link:hover {
@@ -52,7 +53,6 @@
 .navbar-link.active {
     font-weight: bold;
 }
-  
 
 .menu-toggle {
     display: none;
@@ -74,6 +74,7 @@
 @media (max-width: 768px) {
     .menu-toggle {
     display: flex;
+    
     }
 
     .navbar-menu {
@@ -86,6 +87,9 @@
         right: 0;
         left: 0;
         padding: 1rem;
+        width: 30%;
+        border-radius: 7px;
+        margin-top: 0.2rem; 
     }
     
     .navbar-menu.active {

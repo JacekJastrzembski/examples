@@ -6,7 +6,18 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.details {
+/* .ship-details {
+    width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #eaf6ff;
+    box-sizing: border-box;
+} */
+.site-img{
+    display: flex;
     width: 100%;
     margin: 20px auto;
     background: #fff;
@@ -18,13 +29,15 @@
 }
 h1 {
     text-align: center;
-    color: #555;
+    color: #000;
+    font-size: 2.5rem;
 }
 a.back {
+    
     text-decoration:none; 
     color: #000000; 
     font-size: 1.2em; 
-    border: 3px solid #0e807a;
+    border: 1px solid #0e807a;
     border-radius: 5px; 
     transition: all 0.3s ease; 
     background-color: #0e807a;
@@ -37,28 +50,26 @@ a.back:hover {
     border-color: #0e807a;
     text-decoration: underline;
 }
-
-img{
-    max-width: 100%; 
-    margin: 10px 0;
+.ship-image {
+    flex:1;
+    text-align: center;
+    display: flex;
+    place-self: center;
 }
-.rocket-images{
-    display:flex;
-    flex-wrap:wrap;
-    gap: 10px;
-    justify-content: space-around;
-}
-.rocket-images img {
-    max-width: 100%; 
+.ship-image img {
+    flex:2; 
     height: auto;
     border-radius: 5px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
     
 }
-/* .return{
-    margin-top: 15px;
+/* .return {
+    margin:0 auto;
     justify-self:center;
-    W APP.CSS
+    margin-top: 7px;
+    justify-self:center;
+        W APP.CSS
 } */
 .drop{
     position: relative;
@@ -97,24 +108,26 @@ img{
     background-color: #f1f1f1;
 }
 
+
 .drop-list li a {
     text-decoration: none;
     color: #333;
     display: block;
 }
-
-.error-message {
-    color: red;
-    font-weight: bold;
-  }
-.site h1{
-    font-size: 3rem;
-    padding: 0;
-    margin: 0 auto;
-    color:#000000;
+.text{
+    display: block;
+    flex:1;
+    justify-self: center;
 }
-.details h2{
-    font-size: 2rem;
-    padding: 0;
-    margin: 0;
+.drop-return{
+    display: flex;
+}
+.ship-photo{
+    place-self: center;
+}
+@media (max-width: 768px) {
+    .site-img{
+        flex-direction: column;
+    }
+
 }
