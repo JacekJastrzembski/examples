@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './rocketlist.css'
 import { Link } from 'react-router-dom';
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface Rocket {
   id: string;
@@ -33,7 +34,7 @@ const Rocketlist : React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loader"><ClipLoader /></div>;
   }
 
   if (error) {

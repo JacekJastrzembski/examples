@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Shiplist.css'
 import { Link } from 'react-router-dom';
-
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface Ship {
   id: string;
@@ -34,7 +34,7 @@ const Shiplist : React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loader"><ClipLoader /></div>;
   }
 
   if (error) {

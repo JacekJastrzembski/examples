@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './RocketDetails.css';
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface PayloadWeight {
     id: string;
@@ -26,6 +27,7 @@ const RocketDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [rocket, setRocket] = useState<Rocket | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     if (!id) {
@@ -41,6 +43,8 @@ const RocketDetails: React.FC = () => {
         setRocket(data);
       } catch (err) {
         setError('Failed to load rocket details.');
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -93,6 +97,10 @@ const RocketDetails: React.FC = () => {
     );
   };
 
+  if (loading) {
+    return <div className="loader"><ClipLoader /></div>;
+    
+  }
 
   if (error) {
     return <div className="error-message">{error}</div>;

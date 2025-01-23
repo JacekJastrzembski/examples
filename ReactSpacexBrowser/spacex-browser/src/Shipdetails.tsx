@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Shipdetails.css'
 import { Link, useParams } from 'react-router-dom';
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface Ship {
     id: string;
@@ -18,6 +19,7 @@ const Shipdetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [ship, setShip] = useState<Ship | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     if (!id) {
@@ -33,6 +35,8 @@ const Shipdetails: React.FC = () => {
         setShip(data);
       } catch (err) {
         setError('Failed to load ship details.');
+      } finally {
+      setLoading(false);
       }
     };
 
@@ -72,6 +76,10 @@ const Shipdetails: React.FC = () => {
       </div>
     );
   };
+
+  if (loading) {
+    return <div className="loader"><ClipLoader /></div>;
+  }
 
   if (error) {
     return <div className="error-message">{error}</div>;
