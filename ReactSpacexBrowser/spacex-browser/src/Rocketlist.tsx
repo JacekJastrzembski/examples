@@ -48,7 +48,7 @@ const Rocketlist : React.FC = () => {
         <ul className="rocket-list">
           {rockets.map((rocket) => (
             <li key={rocket.id} className="rocket-item">
-              <h2>
+              <h2 className="rocket-header">
                 <Link className="rocket-link" to={`/rockets/${rocket.id}`}>
                 {rocket.name}
                </Link>

@@ -1,5 +1,5 @@
 .site { 
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif;  */
     line-height: 1.6;
     width: 100%;
     margin: 10px auto;
@@ -31,9 +31,12 @@ li.rocket-item{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background: #eaf6ff;
 }
-img {
-    width: 40%;
-    max-width: 100%; 
+.rocket-item img {
+    width: 100%;
+    /* max-width: 100%;  */
+    border-radius: 5px;
+    margin:auto;
+    display:block;
 }
 a.rocket-link {
     text-decoration:underline; 
@@ -49,8 +52,9 @@ a.rocket-link:hover {
     border-color: #0e807a;
     text-decoration: underline;
 }
-h2{
+.rocket-header{
     padding: 3px;
     width: 100%;
+    text-align: center;
 }
 

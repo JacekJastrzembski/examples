@@ -44,10 +44,11 @@ li.ship-item {
     box-sizing: border-box;
 }
 .ship-item img {
-    width: 100%;
+    width: 95%;
     height: 350px;
     object-fit:cover;
     border-radius: 5px;
+    
 }
 .ship-item h2{
     padding: 3px;

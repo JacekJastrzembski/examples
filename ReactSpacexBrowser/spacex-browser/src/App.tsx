@@ -6,6 +6,9 @@ import Rocketlist from './Rocketlist';
 import RocketDetails from './RocketDetails';
 import Shiplist from './Shiplist';
 import Shipdetails from './Shipdetails';
+import Launcheslist from './Launcheslist';
+import Launchesdetails from './Launchesdetails';
+
 
 function App() {
 
@@ -19,6 +22,8 @@ function App() {
           <Route path="/rockets/:id" element={<RocketDetails />} />
           <Route path="/ships" element={<Shiplist />} />
           <Route path="/ships/:id" element={<Shipdetails />} />
+          <Route path="/launches" element={<Launcheslist />} />
+          <Route path="/launches/:id" element={<Launchesdetails />} />
         </Routes>
       </div>
     </>
