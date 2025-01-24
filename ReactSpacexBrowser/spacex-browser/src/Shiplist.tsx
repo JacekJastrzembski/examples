@@ -3,11 +3,16 @@ import './Shiplist.css'
 import { Link } from 'react-router-dom';
 import ClipLoader from "react-spinners/ClipLoader";
 
-interface Ship {
+export interface Ship {
   id: string;
   name: string;
-  image: string;
   type: string;
+  roles: string;
+  year_built: number;
+  mass_kg: number;
+  home_port: string;
+  link: string;
+  image: string;
 }
 
 const Shiplist : React.FC = () => {

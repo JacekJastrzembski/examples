@@ -16,6 +16,9 @@ export interface Links {
         media: string;
         recovery: string;
     }
+    flickr:{
+      original: string[];
+    }
 }
 export interface Launches {
     id: string;
@@ -25,8 +28,10 @@ export interface Launches {
     flight_number: number;
     upcoming: boolean;
     links: Links; 
-    success:boolean;
-    details:string;
+    success: boolean;
+    details: string;
+    rocket: string;
+    ships: string[];
 }
 const Launcheslist: React.FC= () => {
     

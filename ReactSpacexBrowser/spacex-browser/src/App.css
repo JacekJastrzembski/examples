@@ -1,9 +1,17 @@
-
 .container {
   max-width: 1200px;
   margin: 20px auto;
   background: #fff;
   padding: 0px;
+  box-sizing: border-box;
+}
+.site {
+  width: 100%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 .return{
@@ -15,4 +23,21 @@
   top: 50%;
   left: 50%; 
   transform: translate(-50%, -50%);
-  }
+}
+a.back {
+    text-decoration:none; 
+    color: #000000; 
+    font-size: 1.2em; 
+    border: 3px solid #0e807a;
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+    background-color: #0e807a;
+    padding: 5px;
+    
+}
+a.back:hover {
+    color: white; 
+    background-color: #0e807a; 
+    border-color: #0e807a;
+    text-decoration: underline;
+}

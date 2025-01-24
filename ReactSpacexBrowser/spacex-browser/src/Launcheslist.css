@@ -7,9 +7,7 @@ h1 {
 ul{
     list-style-type: none;
     padding: 0;
-
 }
-
 img {
     width: 40%;
     max-width: 100%; 
@@ -23,7 +21,6 @@ a.launch-link {
     transition: all 0.3s ease; 
     font-size: 1em;
 }
-
 a.launch-link:hover {
     color: white; 
     background-color: #0e807a; 
@@ -51,7 +48,6 @@ ul#launches-list {
     margin: 0 auto;
     
 }
-
 li.launch-item {
     display: flex;
     flex-direction: column; 
@@ -68,7 +64,6 @@ li.launch-item {
 }
 .launch-patch{
     margin-top: auto;
-
 }
 .launch-item img {
     
@@ -82,7 +77,6 @@ li.launch-item {
     padding-bottom: 5px;
     min-height: 121px;
 }
-
 .launch-desc {
     /* flex: 2;  */
     min-width: 200px;
@@ -92,7 +86,6 @@ li.launch-item {
     text-align: center;
 
 }
-
 .launch-link {
     flex: 2;
     min-width: 10px;
