@@ -10,7 +10,7 @@ export interface Patch {
 }
 export interface Links {
     patch: Patch; 
-    reddit?: { 
+    reddit: { 
         campaign: string;
         launch: string;
         media: string;

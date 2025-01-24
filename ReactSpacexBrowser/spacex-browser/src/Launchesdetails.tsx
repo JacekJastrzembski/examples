@@ -45,7 +45,7 @@ const Launchesdetails: React.FC = () => {
             {/* <p><strong>Rocket:</strong><Link to="/rockets/id={launches.rocket}" target="_blank" class="rocket-link" > ${rocketName}</a></p> */}
             <p><strong>Date UTC:</strong> {displayFormattedDate(launch.date_utc)}</p>
             <p><strong>Success:</strong> {launch.success ? 'Yes': 'No'}</p>
-            {/* <p><strong>Reddit Campaign:</strong> {launch.links.reddit.campaign}</p> */}
+            <p><strong>Reddit Campaign:</strong> <a href={launch.links.reddit.campaign} target="_blank" rel="noopener noreferrer">{launch.name}</a></p>
             <p><strong>Details:</strong> {launch.details}</p>
             {/* <p><strong>Ships:</strong>${shipNameHTML}</p> */}
             {/* <div className="launch-images">
