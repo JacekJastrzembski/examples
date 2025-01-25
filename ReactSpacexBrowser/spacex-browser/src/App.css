@@ -14,11 +14,11 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
-.return{
+.return {
   margin-top: 15px;
   justify-self:center;
 }
-.loader{
+.loader {
   position: fixed;
   top: 50%;
   left: 50%; 
@@ -33,7 +33,6 @@ a.back {
     transition: all 0.3s ease; 
     background-color: #0e807a;
     padding: 5px;
-    
 }
 a.back:hover {
     color: white; 

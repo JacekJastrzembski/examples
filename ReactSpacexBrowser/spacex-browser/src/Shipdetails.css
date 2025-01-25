@@ -28,13 +28,6 @@ h1 {
     max-width: 600px;
     
 }
-/* .return {
-    margin:0 auto;
-    justify-self:center;
-    margin-top: 7px;
-    justify-self:center;
-        W APP.CSS
-} */
 .text{
     display: block;
     flex:1;

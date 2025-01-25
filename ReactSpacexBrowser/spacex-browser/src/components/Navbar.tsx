@@ -3,13 +3,14 @@ import './navbar.css';
 import { NavLink } from 'react-router-dom'
 
 const Navbar: React.FC = () => {
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -46,12 +47,12 @@ const Navbar: React.FC = () => {
             </NavLink>
           </li>
           <li className="navbar-item">
-            <NavLink to="/rockets" className={({ isActive }: { isActive: boolean })=> isActive ? 'navbar-link active' : 'navbar-link'}>
+            <NavLink to="/rockets" className={({ isActive }: { isActive: boolean }) => isActive ? 'navbar-link active' : 'navbar-link'}>
               Rocket List
             </NavLink>
           </li>
           <li className="navbar-item">
-            <NavLink to="/ships" className={({ isActive }: { isActive: boolean })=> isActive ? 'navbar-link active' : 'navbar-link'}>
+            <NavLink to="/ships" className={({ isActive }: { isActive: boolean }) => isActive ? 'navbar-link active' : 'navbar-link'}>
               Ship List
             </NavLink>
           </li>

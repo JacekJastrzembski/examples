@@ -46,30 +46,28 @@ const Shiplist : React.FC = () => {
     return <div>Error: {error}</div>
   }
 
-
   return (
     <div className="site">
-        <h1>SpaceX Ships</h1>
-        <ul className="ship-list">
-          {ships.map((ship) => (
-            <li key={ship.id} className="ship-item">
-              <h2>
-                <Link className="ship-link" to={`/ships/${ship.id}`}>
+      <h1>SpaceX Ships</h1>
+      <ul className="ship-list">
+        {ships.map((ship) => (
+          <li key={ship.id} className="ship-item">
+            <h2>
+              <Link className="ship-link" to={`/ships/${ship.id}`}>
                 {ship.name}
-               </Link>
-              </h2>
-              <h3>{ship.type}</h3>
-              {ship.image ? (
-                <img src={ship.image} alt={ship.name} />
-                ) : (
-                <div className="ship-photo">
-                    <p><strong>No photo</strong></p>
-                </div>
-                )}
-            </li>
-            
-          ))}
-        </ul>
+              </Link>
+            </h2>
+            <h3>{ship.type}</h3>
+            {ship.image ? (
+              <img src={ship.image} alt={ship.name} />
+            ) : (
+              <div className="ship-photo">
+                <p><strong>No photo</strong></p>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

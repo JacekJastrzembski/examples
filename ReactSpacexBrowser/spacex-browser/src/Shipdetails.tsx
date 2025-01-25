@@ -6,18 +6,6 @@ import { Launches } from './Launcheslist';
 import { displayFormattedDate } from './components/displayFormattedDate';
 import { Ship } from './Shiplist';
 
-// export interface Ship {
-//     id: string;
-//     name: string;
-//     type: string;
-//     roles: string;
-//     year_built: number;
-//     mass_kg: number;
-//     home_port: string;
-//     link: string;
-//     image: string;
-//   }
-
 const Shipdetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [ship, setShip] = useState<Ship | null>(null);

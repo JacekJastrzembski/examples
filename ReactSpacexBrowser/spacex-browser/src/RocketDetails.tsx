@@ -24,7 +24,6 @@ export interface Rocket {
   flickr_images: string[];
 }
 
-
 const RocketDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [rocket, setRocket] = useState<Rocket | null>(null);
@@ -32,7 +31,6 @@ const RocketDetails: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [launches, setLaunches] = useState<Launches[]>([]);
   const [showLaunches, setShowLaunches] = useState<boolean>(false);
-
 
   useEffect(() => {
     if (!id) {
@@ -128,17 +126,14 @@ const RocketDetails: React.FC = () => {
               <img key={index} src={image} alt={rocket.name} />
             ))}
           </div>
-
         </div>
-        
       </div>
-      
+
     );
   };
 
   if (loading) {
     return <div className="loader"><ClipLoader /></div>;
-    
   }
 
   if (error) {
